@@ -7,9 +7,6 @@
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1.7.0/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-<!-- Change default camera resolution -->
-<a-scene embedded arjs='sourceType: webcam; sourceWidth:2560; sourceHeight:1440; displayWidth:2560; displayHeight:1440;'></a-scene>
-
 <!--- Loader Details -->
 <style>
   .arjs-loader {
@@ -41,7 +38,7 @@
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
     embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+    arjs="trackingMethod: best; sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
   >
     <a-nft
       type="nft"
@@ -63,6 +60,7 @@
 </body>
 
 </html>
+
 
 
 
