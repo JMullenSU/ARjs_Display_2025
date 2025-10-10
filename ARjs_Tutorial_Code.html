@@ -31,7 +31,7 @@
 </style>
 -->
 
-<body>
+<body style='margin : 0px; overflow: hidden;'>
   <!-- minimal loader shown until image descriptors are loaded -->
   <!--
   <div class="arjs-loader">
@@ -42,14 +42,14 @@
   <a-scene
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
-    embedded arjs='detectionMode: mono_and_matrix; sourceWidth:1920; sourceHeight:1080; displayWidth: 1920; displayHeight: 1080; debugUIEnabled: false;'>
+    embedded arjs='detectionMode: mono_and_matrix; debugUIEnabled: false;'>
 
     
     <a-marker preset="hiro">
       <a-box
         scale="0.5 0.5 0.5"
         position="0 0 0"
-        material="src: #grid; color: yellow; transparent: true; opacity: 0.50;">
+        material="color: yellow; transparent: true; opacity: 0.50;">
         <!-- animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;" -->
       </a-box>
     </a-marker>
@@ -61,6 +61,7 @@
 </body>
 
 </html>
+
 
 
 
