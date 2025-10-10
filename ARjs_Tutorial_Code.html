@@ -7,6 +7,11 @@
 <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
+<!-- Import gestures controls -->
+<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+<script src="ARjs_Gesture_Detecter.js"></script>
+<script src="ARjs_Gesture_Handler.js"></script>
+
 <!--- Loader Details -->
 <!--
 <style>
@@ -42,6 +47,7 @@
   <a-scene
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
+    gesture-detector
     embedded arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;">
 
     
@@ -58,7 +64,12 @@
     </a-assets>
     -->
     
-    <a-marker type="pattern" url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_mg_dendrite.patt">
+    <a-marker 
+      type="pattern" 
+      url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_mg_dendrite.patt"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse;">
 
       <!--
       <a-video src="#maser_13_video" width="2" height="1.5" position="0 0 0" rotation="90 0 0" play="true"></a-video>
@@ -77,7 +88,9 @@
         id="dendrite_model"
         gltf-model="#dendrite" 
         scale="0.15 0.15 0.15"
-        position="0 0 0">
+        position="0 0 0"
+        class="clickable"
+        gesture-handler="minScale: 0.15; maxScale: 5">
       </a-entity>
       
     </a-marker>
@@ -89,5 +102,6 @@
 </body>
 
 </html>
+
 
 
