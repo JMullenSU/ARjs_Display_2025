@@ -50,7 +50,7 @@
     gesture-detector
     embedded arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;">
 
-    
+    <!--- Assets -->
     <a-assets>
       <a-asset-item
         id="dendrite"
@@ -58,12 +58,7 @@
       ></a-asset-item>
     </a-assets>
 
-    <!--
-    <a-assets>
-      <video id="maser_13_video" src="https://jmullensu.github.io/ARjs_Display_2025/Flight_Video_PAs_Frs_41_220.mp4"></video>
-    </a-assets>
-    -->
-    
+    <!-- mg dendrite -->
     <a-marker 
       type="pattern" 
       url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_mg_dendrite.patt"
@@ -81,7 +76,7 @@
       </a-entity>
     </a-marker>
     
-
+    <!-- parabolic flight -->
     <a-marker 
       type="pattern" 
       url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_parabolic_flights.patt"
@@ -94,7 +89,21 @@
         position="0 0 0"
         material="color: red; transparent: true; opacity: 0.50;">
       </a-box>
+    </a-marker>
+
+    <!-- sounding rocket -->
+    <a-marker 
+      type="pattern" 
+      url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_sounding_rocket.patt"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse;">
       
+      <a-box
+        scale="0.5 0.5 0.5"
+        position="0 0 0"
+        material="color: blue; transparent: true; opacity: 0.50;">
+      </a-box>
     </a-marker>
 
 
