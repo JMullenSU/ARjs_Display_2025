@@ -63,7 +63,7 @@
       ></a-asset-item>
     </a-assets>
 
-    <!-- mg dendrite -->
+    <!-- mg dendrite / flight 220 -->
     <a-marker 
       type="pattern" 
       url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_mg_dendrite.patt"
@@ -81,7 +81,7 @@
       </a-entity>
     </a-marker>
     
-    <!-- parabolic flight -->
+    <!-- parabolic flight / flight 120 -->
     <a-marker 
       type="pattern" 
       url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_parabolic_flights.patt"
@@ -99,7 +99,7 @@
       </a-entity>
     </a-marker>
 
-    <!-- sounding rocket -->
+    <!-- sounding rocket / flight 56 -->
     <a-marker 
       type="pattern" 
       url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_sounding_rocket.patt"
@@ -107,14 +107,17 @@
       emitevents="true"
       cursor="fuse: false; rayOrigin: mouse;">
       
-      <a-box
-        scale="0.5 0.5 0.5"
+      <a-entity
+        id="dendrite_model_f_56"
+        gltf-model="https://jmullensu.github.io/ARjs_Display_2025/flight_den_56.glb" 
+        scale="0.1 0.1 0.1"
         position="0 0 0"
-        material="color: blue; transparent: true; opacity: 0.50;">
-      </a-box>
+        class="clickable"
+        gesture-handler="minScale: 0.05; maxScale: 5">
+      </a-entity>
     </a-marker>
 
-    <!-- ISS -->
+    <!-- ISS / terrestrial 220 -->
     <a-marker 
       type="pattern" 
       url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_iss.patt"
@@ -122,14 +125,17 @@
       emitevents="true"
       cursor="fuse: false; rayOrigin: mouse;">
       
-      <a-box
-        scale="0.5 0.5 0.5"
+      <a-entity
+        id="dendrite_model_t_220"
+        gltf-model="https://jmullensu.github.io/ARjs_Display_2025/terr_den_220.glb" 
+        scale="0.1 0.1 0.1"
         position="0 0 0"
-        material="color: green; transparent: true; opacity: 0.50;">
-      </a-box>
+        class="clickable"
+        gesture-handler="minScale: 0.05; maxScale: 5">
+      </a-entity>
     </a-marker>
 
-    <!-- ISS -->
+    <!-- ISS / terrestrial 150 -->
     <a-marker 
       type="pattern" 
       url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_space_rider.patt"
@@ -137,14 +143,17 @@
       emitevents="true"
       cursor="fuse: false; rayOrigin: mouse;">
       
-      <a-box
-        scale="0.5 0.5 0.5"
+      <a-entity
+        id="dendrite_model_t_150"
+        gltf-model="https://jmullensu.github.io/ARjs_Display_2025/terr_den_150.glb" 
+        scale="0.1 0.1 0.1"
         position="0 0 0"
-        material="color: pink; transparent: true; opacity: 0.50;">
-      </a-box>
+        class="clickable"
+        gesture-handler="minScale: 0.05; maxScale: 5">
+      </a-entity>
     </a-marker>
 
-    <!-- ISS -->
+    <!-- ISS / terrestrial 58 -->
     <a-marker 
       type="pattern" 
       url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_rpm.patt"
@@ -152,11 +161,14 @@
       emitevents="true"
       cursor="fuse: false; rayOrigin: mouse;">
       
-      <a-box
-        scale="0.5 0.5 0.5"
+      <a-entity
+        id="dendrite_model_t_58"
+        gltf-model="https://jmullensu.github.io/ARjs_Display_2025/terr_den_58.glb" 
+        scale="0.1 0.1 0.1"
         position="0 0 0"
-        material="color: purple; transparent: true; opacity: 0.50;">
-      </a-box>
+        class="clickable"
+        gesture-handler="minScale: 0.05; maxScale: 5">
+      </a-entity>
     </a-marker>
 
 
