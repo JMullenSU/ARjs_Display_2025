@@ -72,7 +72,7 @@
       cursor="fuse: false; rayOrigin: mouse;">
       
       <a-entity
-        id="dendrite_model"
+        id="dendrite_model_f_220"
         gltf-model="https://jmullensu.github.io/ARjs_Display_2025/flight_den_220.glb" 
         scale="0.1 0.1 0.1"
         position="0 0 0"
@@ -89,11 +89,14 @@
       emitevents="true"
       cursor="fuse: false; rayOrigin: mouse;">
       
-      <a-box
-        scale="0.5 0.5 0.5"
+      <a-entity
+        id="dendrite_model_f_120"
+        gltf-model="https://jmullensu.github.io/ARjs_Display_2025/flight_den_120.glb" 
+        scale="0.1 0.1 0.1"
         position="0 0 0"
-        material="color: red; transparent: true; opacity: 0.50;">
-      </a-box>
+        class="clickable"
+        gesture-handler="minScale: 0.05; maxScale: 5">
+      </a-entity>
     </a-marker>
 
     <!-- sounding rocket -->
