@@ -50,20 +50,7 @@
     gesture-detector
     embedded arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;">
 
-    <!--- Assets -->
-    <a-assets>
-      <a-asset-item
-        id="dendrite"
-        src="https://jmullensu.github.io/ARjs_Display_2025/BMesh_Dendrite_Assembly_Mk2.gltf"
-      ></a-asset-item>
-
-      <a-asset-item
-        id="dendrite_flight"
-        src="https://jmullensu.github.io/ARjs_Display_2025/test_dendrite.gltf"
-      ></a-asset-item>
-    </a-assets>
-
-    <!-- mg dendrite / flight 220 -->
+    <!-- mg dendrite / flight 120 -->
     <a-marker 
       type="pattern" 
       url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_mg_dendrite.patt"
@@ -72,8 +59,26 @@
       cursor="fuse: false; rayOrigin: mouse;">
       
       <a-entity
-        id="dendrite_model_f_220"
-        gltf-model="https://jmullensu.github.io/ARjs_Display_2025/flight_den_220.glb" 
+        id="dendrite_model_f_120"
+        gltf-model="https://jmullensu.github.io/ARjs_Display_2025/flight_den_120.glb" 
+        scale="0.1 0.1 0.1"
+        position="0 0 0"
+        class="clickable"
+        gesture-handler="minScale: 0.05; maxScale: 5">
+      </a-entity>
+    </a-marker>
+
+    <!-- Space Rider / terrestrial 150 -->
+    <a-marker 
+      type="pattern" 
+      url="https://jmullensu.github.io/ARjs_Display_2025/pattern-HRE_S_marker_space_rider.patt"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse;">
+      
+      <a-entity
+        id="dendrite_model_t_150"
+        gltf-model="https://jmullensu.github.io/ARjs_Display_2025/terr_den_150.glb" 
         scale="0.1 0.1 0.1"
         position="0 0 0"
         class="clickable"
